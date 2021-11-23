@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class LionTest {
-        private Lion lion = new Lion("Самка");
+    private Lion lion = new Lion("Самка");
 
     public LionTest() throws Exception {
     }
