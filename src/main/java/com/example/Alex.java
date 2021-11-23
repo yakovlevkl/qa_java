@@ -1,7 +1,5 @@
 package com.example;
 
-import net.bytebuddy.dynamic.scaffold.TypeInitializer;
-
 import java.util.List;
 
 public class Alex extends Lion {
