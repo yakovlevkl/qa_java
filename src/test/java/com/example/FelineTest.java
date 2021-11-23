@@ -1,48 +1,31 @@
 package com.example;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class FelineTest {
-    @Mock
-    Feline feline;
+    private Feline feline = new Feline();
 
     @Test
     public void eatMeat() throws Exception {
-        feline.eatMeat();
-        Mockito.verify(feline).eatMeat();
+        assertEquals(feline.eatMeat(), List.of("Животные", "Птицы", "Рыба"));
     }
 
     @Test
     public void getFamily() {
-        feline.getFamily();
-        Mockito.verify(feline).getFamily();
+        assertEquals(feline.getFamily(), "Кошачьи");
     }
 
     @Test
     public void getKittens() {
-        feline.getKittens();
-        Mockito.verify(feline).getKittens();
+        assertEquals(feline.getKittens(), 1);
     }
 
     @Test
     public void testGetKittens() {
-        feline.getKittens(2);
-        Mockito.verify(feline).getKittens(2);
+        assertEquals(feline.getKittens(2), 2);
     }
-
-    @Test
-    public void getKittens2() {
-        feline.getKittens(2);
-        feline.getKittens(2);
-        feline.getKittens(2);
-        Mockito.verify(feline, Mockito.times(3)).getKittens(2);
-    }
-
 }

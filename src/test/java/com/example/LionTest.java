@@ -1,44 +1,44 @@
 package com.example;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
 
+import java.util.List;
 
-@RunWith(MockitoJUnitRunner.class)
+import static org.junit.Assert.*;
+
 public class LionTest {
-    @Mock
-    Lion lion;
+        private Lion lion = new Lion("Самка");
+
+    public LionTest() throws Exception {
+    }
 
     @Test
     public void eatMeat() throws Exception {
-        lion.eatMeat();
-        Mockito.verify(lion).eatMeat();
+        assertEquals(lion.eatMeat(), List.of("Животные", "Птицы", "Рыба"));
     }
 
     @Test
     public void getFamily() {
-        lion.getFamily();
-        Mockito.verify(lion).getFamily();
+        assertEquals(lion.getFamily(), "Кошачьи");
     }
 
     @Test
     public void getKittens() {
-        lion.getKittens();
-        Mockito.verify(lion).getKittens();
-    }
-
-    @Test
-    public void testGetKittens() {
-        lion.getKittens(2);
-        Mockito.verify(lion).getKittens(2);
+        assertEquals(lion.getKittens(), 1);
     }
 
     @Test
     public void doesHaveMane() {
-        lion.doesHaveMane();
-        Mockito.verify(lion, Mockito.only()).doesHaveMane();
+        assertFalse(lion.doesHaveMane());
     }
+
+    @Test
+    public void testExceptionLionSex() {
+        try {
+            Lion lionSex = new Lion("Оно");
+        } catch (Exception e) {
+            assertEquals(e.getMessage(),"Используйте допустимые значения пола животного - самей или самка");
+        }
+    }
+
 }

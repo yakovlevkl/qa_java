@@ -31,5 +31,4 @@ public class LionParametersTest {
         int actual = lion.getKittens(number);
         assertEquals(numberExpected, actual);
     }
-
 }
