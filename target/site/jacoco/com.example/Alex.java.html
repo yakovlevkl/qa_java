@@ -3,21 +3,22 @@
 import java.util.List;
 
 public class Alex extends Lion {
-    Alex() throws Exception {
-<span class="fc" id="L7">        super(&quot;Самец&quot;);</span>
-<span class="fc" id="L8">    }</span>
+
+    public Alex(String sex, Feline feline) throws Exception {
+<span class="fc" id="L8">        super(sex, feline);</span>
+<span class="fc" id="L9">    }</span>
 
     List&lt;String&gt; getFriends() {
-<span class="fc" id="L11">        return List.of(&quot;Марти&quot;, &quot;Глория&quot;, &quot;Мелман&quot;);</span>
+<span class="fc" id="L12">        return List.of(&quot;Марти&quot;, &quot;Глория&quot;, &quot;Мелман&quot;);</span>
     }
 
     String getPlaceOfLiving() {
-<span class="fc" id="L15">        return &quot;Нью-Йоркский зоопарк&quot;;</span>
+<span class="fc" id="L16">        return &quot;Нью-Йоркский зоопарк&quot;;</span>
     }
 
     @Override
-    public int getKittens() {
-<span class="fc" id="L20">        return 0;</span>
+    public int getKittens(int number) {
+<span class="fc" id="L21">        return 0;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
