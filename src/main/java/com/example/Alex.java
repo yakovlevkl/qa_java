@@ -20,4 +20,8 @@ public class Alex extends Lion {
         return 0;
     }
 
+    @Override
+    public int getKittens(int kittens) {
+        return 0;
+    }
 }
