@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class LionTest {
-    Feline feline = new Feline();
+    private Feline feline = new Feline();
     private final Lion lion = new Lion("Самка", feline);
 
     public LionTest() throws Exception {
@@ -27,8 +27,10 @@ public class LionTest {
     public void testExceptionLionSex() {
         try {
             Lion lionSex = new Lion("Оно", feline);
-        } catch (Exception e) {
-            assertEquals(e.getMessage(),"Используйте допустимые значения пола животного - самей или самка");
+        } catch (Exception InvalidSexName) {
+            // Test will fall everytime because exception have spelling error
+            assertEquals(InvalidSexName.getMessage(),
+                    "Используйте допустимые значения пола животного - самец или самка");
         }
     }
 

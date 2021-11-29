@@ -7,8 +7,8 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class AlexTest {
-    Feline feline = new Feline();
-    private Alex alex = new Alex("Самец", feline);
+    private Feline feline = new Feline();
+    private Alex alex = new Alex(feline);
 
     public AlexTest() throws Exception {
     }
@@ -25,6 +25,11 @@ public class AlexTest {
 
     @Test
     public void getKittens() {
-        assertEquals(alex.getKittens(1), 0);
+        assertEquals(alex.getKittens(), 0);
+    }
+
+    @Test
+    public void getOneKittens() {
+        assertEquals(alex.getKittens(), 0);
     }
 }

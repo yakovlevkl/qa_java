@@ -14,6 +14,8 @@ public class Feline extends Animal implements Predator {
         return "Кошачьи";
     }
 
+    // Метод создан не мной, это часть выданной задачи, задумка автора мне не известна.
+    // Думаю это не совсем корректный метод, не все кошачьи имеют котят)
     @Override
     public int getKittens() {
         return getKittens(1);

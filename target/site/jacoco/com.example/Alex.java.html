@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Alex extends Lion {
 
-    public Alex(String sex, Feline feline) throws Exception {
-<span class="fc" id="L8">        super(sex, feline);</span>
+    Alex(Feline feline) throws Exception {
+<span class="fc" id="L8">        super(&quot;Самец&quot;, feline);</span>
 <span class="fc" id="L9">    }</span>
 
     List&lt;String&gt; getFriends() {
@@ -15,10 +15,13 @@ public class Alex extends Lion {
     String getPlaceOfLiving() {
 <span class="fc" id="L16">        return &quot;Нью-Йоркский зоопарк&quot;;</span>
     }
+ int getKittens() {
+<span class="fc" id="L19">        return 0;</span>
+    }
 
     @Override
-    public int getKittens(int number) {
-<span class="fc" id="L21">        return 0;</span>
+    public int getKittens(int kittens) {
+<span class="fc" id="L24">        return 0;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

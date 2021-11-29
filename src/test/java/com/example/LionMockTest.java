@@ -21,8 +21,8 @@ public class LionMockTest {
 
     @Test
     public void testGetKittens() {
-        lion.getKittens(2);
-        Mockito.verify(lion).getKittens(2);
+        lion.getKittens();
+        Mockito.verify(lion).getKittens();
     }
 
     @Test

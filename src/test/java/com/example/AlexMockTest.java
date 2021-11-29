@@ -25,9 +25,9 @@ public class AlexMockTest {
 
     @Test
     public void getKittens() {
-        alex.getKittens(1);
-        alex.getKittens(1);
-        alex.getKittens(1);
-        Mockito.verify(alex, Mockito.times(3)).getKittens(1);
+        alex.getKittens();
+        alex.getKittens();
+        alex.getKittens();
+        Mockito.verify(alex, Mockito.times(3)).getKittens();
     }
 }

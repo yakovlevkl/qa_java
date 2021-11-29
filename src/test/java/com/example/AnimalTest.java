@@ -11,8 +11,9 @@ public class AnimalTest {
     public void getFood() {
         try {
             animal.getFood("Веган");
-        } catch (Exception e) {
-            assertEquals(e.getMessage(),"Неизвестный вид животного, используйте значение Травоядное или Хищник");
+        } catch (Exception InvalidAnimalKind) {
+            assertEquals(InvalidAnimalKind.getMessage(),
+                    "Неизвестный вид животного, используйте значение Травоядное или Хищник");
         }
     }
 
