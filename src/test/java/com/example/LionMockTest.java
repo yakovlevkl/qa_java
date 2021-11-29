@@ -18,7 +18,6 @@ public class LionMockTest {
         Mockito.verify(lion).getFood();
     }
 
-
     @Test
     public void testGetKittens() {
         lion.getKittens();

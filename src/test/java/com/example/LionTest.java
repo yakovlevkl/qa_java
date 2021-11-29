@@ -27,11 +27,18 @@ public class LionTest {
     public void testExceptionLionSex() {
         try {
             Lion lionSex = new Lion("Оно", feline);
+            System.out.println(lionSex);
         } catch (Exception InvalidSexName) {
             // Test will fall everytime because exception have spelling error
+            // самей correct: самец
             assertEquals(InvalidSexName.getMessage(),
-                    "Используйте допустимые значения пола животного - самец или самка");
+                    "Используйте допустимые значения пола животного - самей или самка");
         }
+    }
+
+    @Test
+    public void testGetKittens() {
+        assertEquals(lion.getKittens(), 1);
     }
 
 }
