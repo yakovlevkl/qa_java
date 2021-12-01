@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Cat {
 
-    Predator predator;
+    private Predator predator;
 
-    public Cat(Feline feline) {
+    Cat(Feline feline) {
         this.predator = feline;
     }
 
-    public String getSound() {
+    String getSound() {
         return "Мяу";
     }
 
